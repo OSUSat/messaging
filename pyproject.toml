@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osusat-messaging"
+version = "1.0.1"
+description = "OSUSat messaging library (Python bindings)"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Ethan Eggert", email = "eggertet@oregonstate.edu" }
+]
+dependencies = []
+
+[tool.setuptools]
+package-dir = { "" = "python" }
+packages = ["osusat_messaging"]
+

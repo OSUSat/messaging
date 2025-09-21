@@ -1,0 +1,41 @@
+version: 1
+
+destinations:
+  EPS: 0x01
+  PAYLOAD: 0x02
+  OBC: 0x03
+  COMMS: 0x04
+  GSE: 0x05
+  AVIONICS: 0x06
+  BEAVS: 0x07
+
+message_types:
+  COMMAND: 0x01
+  TELEMETRY: 0x02
+  ACK: 0x03
+  NACK: 0x04
+  EXPERIMENT: 0x05
+
+common_commands: # fixed range 0x01-0x10
+  HEARTBEAT: 0x01
+  RESET: 0x02
+  ENABLE: 0x03
+  DISABLE: 0x04
+  STATUS: 0x05
+  HEALTHCHECK: 0x06
+
+subsystems:
+  EPS:
+    - ENABLE_RAIL
+    - DISABLE_RAIL
+  PAYLOAD:
+    - CAPTURE_IMAGE
+    - TRANSFER_IMAGE
+    - ARM
+    - DISARM
+  OBC:
+    - GET_SYSTEM_STATE
+  GSE:
+    - TOGGLE_SAFE_MODE
+    - TOGGLE_MAINTENANCE_MODE
+    - PROBE_SUBSYSTEM_STATUS

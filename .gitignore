@@ -1,0 +1,8 @@
+.clangd
+generator/.venv/
+build/
+examples/*/build/
+.venv/
+dist/
+python/osusat_messaging.egg-info/
+python/osusat_messaging/__pycache__/
